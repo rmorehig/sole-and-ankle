@@ -27,11 +27,17 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
+  padding: 18px 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  display: flex;
+  align-items: baseline;
+  height: 72px;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  margin: 0 auto;
+  display: flex;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
@@ -39,9 +45,11 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
-
   &:first-of-type {
     color: ${COLORS.secondary};
+  }
+  &:not(:first-child) {
+    margin-left: 48px;
   }
 `;
 
